@@ -1,0 +1,10 @@
+title.hot-key.option.ms=Open Menu
+showguipositionget.hot-key.option.ms=Get Position(Long Press)
+
+world-operate.mainmenu.gui.ms=World Edit
+mapshare.mainmenu.gui.ms=Share
+misc.mainmenu.gui.ms=Miscellaneous
+none.toolstip.mainmenu.gui.ms=Press ESC or Click here to Back Game
+me.toolstip.mainmenu.gui.ms=Click Here to Edit the Map
+s.toolstip.mainmenu.gui.ms=Click Here to Share
+misc.toolstip.mainmenu.gui.ms=Click Here to See More

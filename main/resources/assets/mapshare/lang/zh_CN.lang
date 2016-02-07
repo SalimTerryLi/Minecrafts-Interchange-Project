@@ -1,0 +1,10 @@
+title.hot-key.option.ms=打开菜单
+showguipositionget.hot-key.option.ms=获取坐标（长按）
+
+world-operate.mainmenu.gui.ms=地图编辑
+mapshare.mainmenu.gui.ms=分享
+misc.mainmenu.gui.ms=杂项
+none.toolstip.mainmenu.gui.ms=按ESC或单击回到游戏
+me.toolstip.mainmenu.gui.ms=点击这里编辑地图
+s.toolstip.mainmenu.gui.ms=点击这里来分享
+misc.toolstip.mainmenu.gui.ms=点击这里查看更多
