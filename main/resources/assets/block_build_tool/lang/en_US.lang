@@ -1,0 +1,64 @@
+title.option.mc.bbt=Block Build Tool
+title.hot-key.option.mc.bbt=Display
+
+title.gui.bbt=Block Build Tool's Main Menu
+subtitle.gui.bbt=Block Build Tool
+btnBuild.button.gui.bbt=Quickly Build
+btnReplace.button.gui.bbt=Block Replace
+btnCopy.button.gui.bbt=Area Copy
+btnPaste.button.gui.bbt=Area Paste
+btnImport.button.gui.bbt=Import to File
+btnExport.button.gui.bbt=Export from File
+btnClose.button.gui.bbt=Back
+
+name.build.mode.bbt=Quickly Build Mode
+name.replace.mode.bbt=Block Replace Mode
+name.copy.mode.bbt=Area Copy Mode
+name.paste.mode.bbt=Area Paste Mode
+name.import.mode.bbt=Import to File Menu
+name.export.mode.bbt=Export from File Menu
+
+blockid.build.gui.bbt=Block ID
+blocktype.build.gui.bbt=Block Type
+position.build.gui.bbt=Position
+btnposselect.button.gui.bbt=Select
+btnbuilding.button.gui.bbt=Build!
+
+reblockid.replace.gui.bbt=ID Which Will Be Replaced
+reblocktype.replace.gui.bbt=Type Which Will Be Replaced
+blockid.replace.gui.bbt=ID Which Will Replace To
+blocktype.replace.gui.bbt=Type Which Will Replace To
+keepblockid.replace.gui.bbt=ID Which Will Be Kept
+keepblocktype.replace.gui.bbt=Type Which Will Be Kept
+btnenabledtype.button.gui.bbt=Enabled
+btndisabledtype.button.gui.bbt=Disabled
+position.replace.gui.bbt=Position
+btnposselect.button.gui.bbt=Select
+btnreplacing.button.gui.bbt=Replace!
+
+btncoping.button.gui.bbt=Copy!
+position.copy.gui.bbt=Position
+
+btnpasting.button.gui.bbt=Paste!
+ignoreempty.paste.gui.bbt=Ignore air block
+btnignoreemptyenabled.paste.gui.bbt=Enable
+btnignoreemptydisabled.paste.gui.bbt=Disabled
+btnpreview.paste.gui.bbt=Show Previewer
+btnchangepreview.paste.gui.bbt=Change Preview view
+btnclosepreview.paste.gui.bbt=Close Preview view
+
+btnexporting.button.gui.bbt=Export!
+btnimporting.button.gui.bbt=Import!
+
+btngetfootpos.button.gui.bbt=Click here to get the block pos you stand on.
+btngetbbttool.button.gui.bbt=Get BBT Tool
+
+maintip.setpositiononlyone.gui.bbt=TIP:use "Position Selector" to right click on any block which you'd like to get the position.
+maintip.setpositiontwo.gui.bbt=TIP:use "Position Selector" to right click on any block which you'd like to get the first position.
+maintip.setpositiontwosecond.gui.bbt=TIP:use "Position Selector" to right click on any block which you'd like to get the second position.
+btncancelsel.button.gui.bbt=Cancel
+
+item.PositionSelector.name=BBT Position Selector
+1.blockclick.chat.bbt=You clicked the block at position(
+2.blockclick.chat.bbt=) whose ID is (
+3.blockclick.chat.bbt=) and Type is (
