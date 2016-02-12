@@ -8,3 +8,10 @@ none.toolstip.mainmenu.gui.ms=Press ESC or Click here to Back Game
 me.toolstip.mainmenu.gui.ms=Click Here to Edit the Map
 s.toolstip.mainmenu.gui.ms=Click Here to Share
 misc.toolstip.mainmenu.gui.ms=Click Here to See More
+
+build.toolstip.mapeditmain.gui.ms=Quickly Build
+replace.toolstip.mapeditmain.gui.ms=Quickly Replace
+copy.toolstip.mapeditmain.gui.ms=Area Copy
+cut.toolstip.mapeditmain.gui.ms=Area Cut
+paste.toolstip.mapeditmain.gui.ms=Paste
+back.toolstip.mapeditmain.gui.ms=Back to Main Menu

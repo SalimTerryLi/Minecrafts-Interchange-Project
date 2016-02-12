@@ -8,3 +8,10 @@ none.toolstip.mainmenu.gui.ms=按ESC或单击回到游戏
 me.toolstip.mainmenu.gui.ms=点击这里编辑地图
 s.toolstip.mainmenu.gui.ms=点击这里来分享
 misc.toolstip.mainmenu.gui.ms=点击这里查看更多
+
+build.toolstip.mapeditmain.gui.ms=快速建造
+replace.toolstip.mapeditmain.gui.ms=快速替换
+copy.toolstip.mapeditmain.gui.ms=区域复制
+cut.toolstip.mapeditmain.gui.ms=区域剪切
+paste.toolstip.mapeditmain.gui.ms=粘贴
+back.toolstip.mapeditmain.gui.ms=返回主菜单

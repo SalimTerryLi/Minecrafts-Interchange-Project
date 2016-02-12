@@ -1,16 +1,15 @@
 package ml.cnstl.MapShare.GUI;
 
 import java.util.*;
-
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
-
 import ml.cnstl.MapShare.Data;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import ml.cnstl.MapShare.GUI.guiMapEdit.*;
 
 public class MainMenu extends GuiScreen
 {
@@ -36,7 +35,7 @@ public class MainMenu extends GuiScreen
 	{
 		if(par3==0)//左键单击
 		{
-			if((par1<((width-3*80)/4+80))&(par1>((width-3*80)/4))&(par2<height*0.2+80+20)&(par2>height*0.2)){System.out.println("1");}//区域判定
+			if((par1<((width-3*80)/4+80))&(par1>((width-3*80)/4))&(par2<height*0.2+80+20)&(par2>height*0.2)){mc.displayGuiScreen(Data.lastShowMapEditGui);}//区域判定*这里作为测试代码
 			else if((par1<((width-3*80)/2+80+80))&(par1>((width-3*80)/2+80))&(par2<height*0.2+80+20)&(par2>height*0.2)){System.out.println("2");}
 			else if((par1<((width-3*80)/4*3+2*80+80))&(par1>((width-3*80)/4*3+2*80))&(par2<height*0.2+80+20)&(par2>height*0.2)){System.out.println("3");}
 			else{Minecraft mc = Minecraft.getMinecraft();mc.setIngameFocus();}
