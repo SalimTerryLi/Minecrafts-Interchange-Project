@@ -16,25 +16,10 @@ public class MainMenu extends GuiScreen
 {
 	private ResourceLocation texture;
 	private String ToolsTip="";
-	/*private TimerTask task = new TimerTask()
-	{  
-        @Override  
-        public void run()
-        {
-        	int par1 = Mouse.getX() * width / mc.displayWidth;
-            int par2 = height - Mouse.getY() * height / mc.displayHeight - 1;
-        	if((par1<((width-3*80)/4+80))&(par1>((width-3*80)/4))&(par2<height*0.2+80+20)&(par2>height*0.2)){ToolsTip="me";}//«¯”Ú≈–∂®
-        	else if((par1<((width-3*80)/2+80+80))&(par1>((width-3*80)/2+80))&(par2<height*0.2+80+20)&(par2>height*0.2)){ToolsTip="s";}
-        	else if((par1<((width-3*80)/4*3+2*80+80))&(par1>((width-3*80)/4*3+2*80))&(par2<height*0.2+80+20)&(par2>height*0.2)){ToolsTip="misc";}
-        	else{ToolsTip="";}
-        }  
-    };
-    Timer timer = new Timer();*/
 	
 	public void initGui()
 	{
 		Keyboard.enableRepeatEvents(true);
-		//this.timer.scheduleAtFixedRate(task, 0, 100);
 	}
 	protected void keyTyped(char par1, int par2)
 	{
@@ -98,18 +83,10 @@ public class MainMenu extends GuiScreen
     	drawRect(2, (int)(height*0.96), width-2, (int) (height*0.96+1), 0x80FFFFFF);
 		drawString(fontRendererObj,"MapShare "+Data.MOD_VERSION,(int)(width-fontRendererObj.getStringWidth("MapShare "+Data.MOD_VERSION)-2), (int)(height*0.966), 0xFFFFFF);
 		
-		//super.drawScreen(par1, par2, par3);
 	}
-	@Override
-    protected void actionPerformed(GuiButton button)
-	{
-		
-	}
-	@Override
 	public void onGuiClosed()
 	{
 		Keyboard.enableRepeatEvents(false);
-		//timer.cancel();
 	}
 	@Override
     public boolean doesGuiPauseGame() {
