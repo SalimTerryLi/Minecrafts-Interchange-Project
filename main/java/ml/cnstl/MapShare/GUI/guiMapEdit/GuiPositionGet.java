@@ -28,4 +28,9 @@ public class GuiPositionGet extends GuiScreen
         }
 		super.handleKeyboardInput();
 	}
+	@Override
+    public boolean doesGuiPauseGame() {
+        return false;
+    }
+	
 }
