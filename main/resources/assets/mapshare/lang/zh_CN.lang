@@ -15,3 +15,8 @@ copy.toolstip.mapeditmain.gui.ms=区域复制
 cut.toolstip.mapeditmain.gui.ms=区域剪切
 paste.toolstip.mapeditmain.gui.ms=粘贴
 back.toolstip.mapeditmain.gui.ms=返回主菜单
+
+btnbuilding.button.guibuild.gui.ms=建造！
+blockid.string.guibuild.gui.ms=方块ID
+blocktype.string.guibuild.gui.ms=方块类型
+position.string.guibuild.gui.ms=坐标

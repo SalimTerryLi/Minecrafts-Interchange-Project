@@ -195,7 +195,7 @@ public class MapEditMain extends GuiScreen
 	}
 	public void drawSubCenteredString(FontRenderer p_73732_1_, String p_73732_2_, int p_73732_3_, int p_73732_4_, int p_73732_5_)
 	{
-		drawCenteredString(p_73732_1_, p_73732_2_, p_73732_5_+intxStartPos, p_73732_5_, p_73732_5_);
+		drawCenteredString(p_73732_1_, p_73732_2_, p_73732_3_+intxStartPos, p_73732_4_, p_73732_5_);
 	}
 	public GuiButton addGuiButton(int p_i1021_1_, int p_i1021_2_, int p_i1021_3_, int p_i1021_4_, int p_i1021_5_, String p_i1021_6_)
 	{
@@ -227,8 +227,6 @@ public class MapEditMain extends GuiScreen
         {
             ((GuiTextField)this.textList.get(k)).mouseClicked(par1, par2, par3);
         }
-        System.out.println(textList.size());
-        System.out.println(textList.size());
 	}
 	protected void SubkeyTyped(char par1, int par2)
 	{

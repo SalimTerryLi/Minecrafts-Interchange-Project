@@ -15,3 +15,8 @@ copy.toolstip.mapeditmain.gui.ms=Area Copy
 cut.toolstip.mapeditmain.gui.ms=Area Cut
 paste.toolstip.mapeditmain.gui.ms=Paste
 back.toolstip.mapeditmain.gui.ms=Back to Main Menu
+
+btnbuilding.button.guibuild.gui.ms=Build!
+blockid.string.guibuild.gui.ms=Block ID
+blocktype.string.guibuild.gui.ms=Block Type
+position.string.guibuild.gui.ms=Position
