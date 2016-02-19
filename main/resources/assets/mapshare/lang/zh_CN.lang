@@ -20,3 +20,14 @@ btnbuilding.button.guibuild.gui.ms=建造！
 blockid.string.guibuild.gui.ms=方块ID
 blocktype.string.guibuild.gui.ms=方块类型
 position.string.guibuild.gui.ms=坐标
+
+reblockid.button.guireplace.gui.ms=被替换的ID
+reblocktype.button.guireplace.gui.ms=被替换的类型
+blockid.string.guireplace.gui.ms=替换后的ID
+blocktype.string.guireplace.gui.ms=替换后的类型
+keepblockid.button.guireplace.gui.ms=被保留的ID
+keepblocktype.button.guireplace.gui.ms=被保留的类型
+btnenabledtype.button.guireplace.gui.ms=已启用
+btndisabledtype.button.guireplace.gui.ms=已禁用
+position.string.guireplace.gui.ms=坐标
+btnreplacing.button.guireplace.gui.ms=替换！

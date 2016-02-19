@@ -20,3 +20,14 @@ btnbuilding.button.guibuild.gui.ms=Build!
 blockid.string.guibuild.gui.ms=Block ID
 blocktype.string.guibuild.gui.ms=Block Type
 position.string.guibuild.gui.ms=Position
+
+reblockid.button.guireplace.gui.ms=ID Which Will Be Replaced
+reblocktype.button.guireplace.gui.ms=Type Which Will Be Replaced
+blockid.string.guireplace.gui.ms=ID Which Will Replace To
+blocktype.string.guireplace.gui.ms=Type Which Will Replace To
+keepblockid.button.guireplace.gui.ms=ID Which Will Be Kept
+keepblocktype.button.guireplace.gui.ms=Type Which Will Be Kept
+btnenabledtype.button.guireplace.gui.ms=Enabled
+btndisabledtype.button.guireplace.gui.ms=Disabled
+position.string.guireplace.gui.ms=Position
+btnreplacing.button.guireplace.gui.ms=Replace!
