@@ -15,6 +15,8 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import net.minecraftforge.client.event.GuiScreenEvent.InitGuiEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 public class MapEditMain extends GuiScreen
 {
@@ -25,8 +27,8 @@ public class MapEditMain extends GuiScreen
 	{
 		this.intxStartPos=(int) (super.width*0.1+1);
 		this.height=(int) (super.height*0.96);this.width=(int) (super.width-(super.width*0.1+1));
-		System.out.println(height+" "+width+" "+super.height+" "+super.width);
 		Keyboard.enableRepeatEvents(true);
+		textList.clear();
 		initSubGui();
 	}
 	public void onGuiClosed()
@@ -100,6 +102,7 @@ public class MapEditMain extends GuiScreen
 			
 		}
 		drawSubScreen(par1,par2,par3);
+		
 		drawRect_(2, (int)(super.height*0.96), super.width-2, (int) (super.height*0.96+1), 0x80FFFFFF);//横分界线
 		drawString_(fontRendererObj,ToolsTip,2, (int)(super.height*0.966), 0xFFFFFF);ToolsTip="";
 		drawString_(fontRendererObj,"MapShare "+Data.MOD_VERSION,(int)(super.width-fontRendererObj.getStringWidth("MapShare "+Data.MOD_VERSION)-2), (int)(super.height*0.966), 0xFFFFFF);
@@ -153,6 +156,7 @@ public class MapEditMain extends GuiScreen
     protected void keyTyped(char par1, int par2)
 	{
 		SubkeyTyped(par1, par2);
+		super.keyTyped(par1, par2);
 	}
 	//以上主体
 	public static void drawRect_(int p_73734_0_, int p_73734_1_, int p_73734_2_, int p_73734_3_, int p_73734_4_)
@@ -223,6 +227,8 @@ public class MapEditMain extends GuiScreen
         {
             ((GuiTextField)this.textList.get(k)).mouseClicked(par1, par2, par3);
         }
+        System.out.println(textList.size());
+        System.out.println(textList.size());
 	}
 	protected void SubkeyTyped(char par1, int par2)
 	{
