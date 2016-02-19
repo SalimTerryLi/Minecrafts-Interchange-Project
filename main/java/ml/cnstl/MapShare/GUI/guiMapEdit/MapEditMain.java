@@ -176,6 +176,7 @@ public class MapEditMain extends GuiScreen
 		super.drawCenteredString(p_73732_1_, p_73732_2_, p_73732_5_, p_73732_5_, p_73732_5_);
 	}
 	protected List textList = new ArrayList();
+	protected List textListtext=new ArrayList();
 	//以上封装
 	public int height=(int) (super.height*0.96),width=(int) (super.width-(super.width*0.1+1));
 	private int intxStartPos=(int) (super.width*0.1+1),intyStartPos=0;
@@ -207,6 +208,7 @@ public class MapEditMain extends GuiScreen
 	{
 		GuiTextField newGuiTextField = new GuiTextField(p_i1032_1_,  p_i1032_2_+intxStartPos,  p_i1032_3_,  p_i1032_4_,  p_i1032_5_);
 		textList.add(newGuiTextField);
+		textListtext.add("");
 		return newGuiTextField;
 	}
 	public void drawSubScreen(int par1, int par2, float par3)
@@ -215,6 +217,7 @@ public class MapEditMain extends GuiScreen
 
         for (k = 0; k < this.textList.size(); ++k)
         {
+        	((GuiTextField)this.textList.get(k)).setText(((String)(textListtext.get(k))));
             ((GuiTextField)this.textList.get(k)).drawTextBox();
         }
 	}
@@ -234,8 +237,12 @@ public class MapEditMain extends GuiScreen
 
         for (k = 0; k < this.textList.size(); ++k)
         {
-            if(((GuiTextField)this.textList.get(k)).textboxKeyTyped(par1, par2)) //向文本框传入输入的内容
-                return;
+            if(((GuiTextField)this.textList.get(k)).textboxKeyTyped(par1, par2)){} //向文本框传入输入的内容
+                //return;
+        }
+        for (k = 0; k < this.textList.size(); ++k)
+        {
+        	textListtext.set(k, ((GuiTextField)this.textList.get(k)).getText());
         }
 	}
 	//以上子类优化

@@ -16,11 +16,9 @@ public class GuiBuild extends MapEditMain
 	public void initSubGui()
 	{
 		tfBlockID=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
-		tfBlockID.setText("");
 		tfBlockType=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.2), (int) (width*0.5-20), 15);
-		tfBlockType.setText("");
 		tfPosition=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.3), (int) (width*0.5-20), 15);
-		tfPosition.setText("");
+		//tfPosition.setText("");
 		buttonList.add(btnBuilding = addGuiButton(0, (int)(width-width*0.5-50), (int)(height*0.8), 100, 20, StatCollector.translateToLocal("btnbuilding.button.guibuild.gui.ms")));
 	}
 	public void drawSubScreen(int par1, int par2, float par3)
