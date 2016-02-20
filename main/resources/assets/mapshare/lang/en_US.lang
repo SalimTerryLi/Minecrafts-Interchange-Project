@@ -16,6 +16,8 @@ cut.toolstip.mapeditmain.gui.ms=Area Cut
 paste.toolstip.mapeditmain.gui.ms=Paste
 back.toolstip.mapeditmain.gui.ms=Back to Main Menu
 
+title.string.guipositionget.gui.ms=Position Capturer
+
 btnbuilding.button.guibuild.gui.ms=Build!
 blockid.string.guibuild.gui.ms=Block ID
 blocktype.string.guibuild.gui.ms=Block Type
@@ -31,3 +33,6 @@ btnenabledtype.button.guireplace.gui.ms=Enabled
 btndisabledtype.button.guireplace.gui.ms=Disabled
 position.string.guireplace.gui.ms=Position
 btnreplacing.button.guireplace.gui.ms=Replace!
+
+btncoping.button.guicopy.gui.ms=Copy!
+position.string.guicopy.gui.ms=Position

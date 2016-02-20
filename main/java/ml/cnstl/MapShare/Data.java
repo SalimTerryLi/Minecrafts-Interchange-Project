@@ -20,4 +20,6 @@ public class Data
 	public static final GuiScreen GuiCut=new GuiCut();
 	public static final GuiScreen GuiPaste=new GuiPaste();
 	public static GuiScreen lastShowMapEditGui=GuiBuild;
+	
+	public static int[] Position=new int[6];
 }

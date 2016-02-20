@@ -16,6 +16,8 @@ cut.toolstip.mapeditmain.gui.ms=区域剪切
 paste.toolstip.mapeditmain.gui.ms=粘贴
 back.toolstip.mapeditmain.gui.ms=返回主菜单
 
+title.string.guipositionget.gui.ms=坐标获取
+
 btnbuilding.button.guibuild.gui.ms=建造！
 blockid.string.guibuild.gui.ms=方块ID
 blocktype.string.guibuild.gui.ms=方块类型
@@ -31,3 +33,6 @@ btnenabledtype.button.guireplace.gui.ms=已启用
 btndisabledtype.button.guireplace.gui.ms=已禁用
 position.string.guireplace.gui.ms=坐标
 btnreplacing.button.guireplace.gui.ms=替换！
+
+btncoping.button.guicopy.gui.ms=复制！
+position.string.guicopy.gui.ms=坐标
