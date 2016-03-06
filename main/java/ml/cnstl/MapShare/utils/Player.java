@@ -55,4 +55,23 @@ public class Player
     	
 		return back;
 	}
+	public int[] getFacetoPosition(int ExploreLength)
+	{
+		int[] back=new int[3];
+		MovingObjectPosition objPosition=world.func_147447_a(Vec3.createVectorHelper(player.posX, player.posY, player.posZ), Vec3.createVectorHelper(player.posX+ExploreLength*player.getLookVec().xCoord, player.posY+ExploreLength*player.getLookVec().yCoord, player.posZ+ExploreLength*player.getLookVec().zCoord), true, false, false);
+		if(objPosition==null)
+		{
+			back[0]=0;
+			back[1]=0;
+			back[2]=0;
+		}
+		else
+		{
+			back[0]=(int)objPosition.blockX;
+	    	back[1]=(int)objPosition.blockY;
+	    	back[2]=(int)objPosition.blockZ;
+		}
+    	
+		return back;
+	}
 }
