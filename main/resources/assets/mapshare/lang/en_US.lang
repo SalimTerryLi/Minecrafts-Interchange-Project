@@ -22,6 +22,7 @@ position2.string.guipositionget.gui.ms=Position 2
 poh.string.guipositionget.gui.ms=Position of head
 puf.string.guipositionget.gui.ms=Position under foots
 pft.string.guipositionget.gui.ms=Position that face to
+applyto.string.guipositionget.gui.ms=Apply to
 
 btnbuilding.button.guibuild.gui.ms=Build!
 blockid.string.guibuild.gui.ms=Block ID
