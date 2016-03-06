@@ -17,6 +17,12 @@ paste.toolstip.mapeditmain.gui.ms=粘贴
 back.toolstip.mapeditmain.gui.ms=返回主菜单
 
 title.string.guipositionget.gui.ms=坐标获取
+position1.string.guipositionget.gui.ms=坐标1
+position2.string.guipositionget.gui.ms=坐标2
+poh.string.guipositionget.gui.ms=头部的坐标
+puf.string.guipositionget.gui.ms=脚下的坐标
+pft.string.guipositionget.gui.ms=指向的坐标
+applyto.string.guipositionget.gui.ms=应用至
 
 btnbuilding.button.guibuild.gui.ms=建造！
 blockid.string.guibuild.gui.ms=方块ID

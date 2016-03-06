@@ -17,6 +17,11 @@ paste.toolstip.mapeditmain.gui.ms=Paste
 back.toolstip.mapeditmain.gui.ms=Back to Main Menu
 
 title.string.guipositionget.gui.ms=Position Capturer
+position1.string.guipositionget.gui.ms=Position 1
+position2.string.guipositionget.gui.ms=Position 2
+poh.string.guipositionget.gui.ms=Position of head
+puf.string.guipositionget.gui.ms=Position under foots
+pft.string.guipositionget.gui.ms=Position that face to
 
 btnbuilding.button.guibuild.gui.ms=Build!
 blockid.string.guibuild.gui.ms=Block ID

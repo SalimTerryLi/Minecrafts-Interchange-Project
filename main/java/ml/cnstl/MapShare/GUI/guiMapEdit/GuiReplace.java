@@ -1,5 +1,6 @@
 package ml.cnstl.MapShare.GUI.guiMapEdit;
 
+import ml.cnstl.MapShare.Data;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.util.StatCollector;
