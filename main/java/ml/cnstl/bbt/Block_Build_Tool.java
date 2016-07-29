@@ -1,4 +1,4 @@
-package ml.cnstl.bbt;
+ï»¿package ml.cnstl.bbt;
 
 import ml.cnstl.bbt.item.*;
 import net.minecraft.creativetab.CreativeTabs;
@@ -29,7 +29,7 @@ public class Block_Build_Tool
 		Info.PosSelector.setMaxStackSize(1);
 		Info.PosSelector.setCreativeTab(CreativeTabs.tabMaterials);
 		GameRegistry.registerItem(Info.PosSelector, "PositionSelector");
-		//×ø±êÑ¡Ôñ¹¤¾ß
+		//åæ ‡é€‰æ‹©å·¥å…·
 	}
 	 
 	@EventHandler
@@ -43,11 +43,11 @@ public class Block_Build_Tool
 	{
 		
 	}
-	@SidedProxy(modId=Info.MOD_ID, //´Ë´¦ÎªÄãµÄmodid
+	@SidedProxy(modId=Info.MOD_ID, //æ­¤å¤„ä¸ºä½ çš„modid
 	        serverSide="ml.cnstl.bbt.CommonProxy",
 	        clientSide="ml.cnstl.bbt.CommonProxy$ClientProxy")
 	public static CommonProxy proxy;
-	//¹ı³Ì³õÊ¼»¯
+	//è¿‡ç¨‹åˆå§‹åŒ–
 	
-	//×Ô¶¨Òå³õÊ¼»¯×Óº¯Êı
+	//è‡ªå®šä¹‰åˆå§‹åŒ–å­å‡½æ•°
 }

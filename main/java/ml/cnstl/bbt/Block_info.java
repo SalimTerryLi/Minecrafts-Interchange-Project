@@ -1,4 +1,4 @@
-package ml.cnstl.bbt;
+﻿package ml.cnstl.bbt;
 
 import net.minecraft.block.Block;
 

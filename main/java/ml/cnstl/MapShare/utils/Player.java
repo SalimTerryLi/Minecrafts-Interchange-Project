@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare.utils;
+﻿package ml.cnstl.MapShare.utils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityClientPlayerMP;

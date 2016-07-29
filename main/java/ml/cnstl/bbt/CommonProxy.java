@@ -1,4 +1,4 @@
-package ml.cnstl.bbt;
+锘縫ackage ml.cnstl.bbt;
 
 import org.lwjgl.input.Keyboard;
 
@@ -34,7 +34,7 @@ public class CommonProxy {
  
         @Override
         public void init() {
-            //通常这里还会有super.init() 不过这里我们在服务器代理器中没有操作,因此就省去了
+            //閫氬父杩欓噷杩樹細鏈塻uper.init() 涓嶈繃杩欓噷鎴戜滑鍦ㄦ湇鍔″櫒浠ｇ悊鍣ㄤ腑娌℃湁鎿嶄綔,鍥犳灏辩渷鍘讳簡
         	FMLCommonHandler.instance().bus().register(this);
         	ClientRegistry.registerKeyBinding(kbShowNewGui);
         	MinecraftForge.EVENT_BUS.register(new CommonProxy());

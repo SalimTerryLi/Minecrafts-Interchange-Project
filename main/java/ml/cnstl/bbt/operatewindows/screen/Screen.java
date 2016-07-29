@@ -1,4 +1,4 @@
-package ml.cnstl.bbt.operatewindows.screen;
+ï»¿package ml.cnstl.bbt.operatewindows.screen;
 
 import org.lwjgl.input.Keyboard;
 
@@ -14,15 +14,15 @@ import net.minecraft.item.ItemStack;
 public class Screen extends GuiScreen{
 	
 	protected GuiScreen parentScreen;
-	protected GuiButton btnClose,btnCancelSel,btngetBBTtool;//Ö÷²Ëµ¥/È«¾Ö°´Å¥
+	protected GuiButton btnClose,btnCancelSel,btngetBBTtool;//ä¸»èœå•/å…¨å±€æŒ‰é’®
 	protected GuiButton btnPosGet;
 	protected GuiTextField tfBlockID,tfBlockType,tfreBlockID,tfreBlockType,tfPosition;
 	protected Block_operate op=new Block_operate();
 	
 	public Screen(GuiScreen parent)
     {
-         parentScreen = parent; //¼ÇÏÂÊÇÄÄ¸ö½çÃæ´ò¿ªÁËËü,ÒÔ±ãÒÔºó·µ»ØÄÇ¸ö½çÃæ
-        //ÔÚÕâÀï³õÊ¼»¯Óë½çÃæÎŞ¹ØµÄÊı¾İ,»òÕßÊÇÖ»Ğè³õÊ¼»¯Ò»´ÎµÄÊı¾İ.
+         parentScreen = parent; //è®°ä¸‹æ˜¯å“ªä¸ªç•Œé¢æ‰“å¼€äº†å®ƒ,ä»¥ä¾¿ä»¥åè¿”å›é‚£ä¸ªç•Œé¢
+        //åœ¨è¿™é‡Œåˆå§‹åŒ–ä¸ç•Œé¢æ— å…³çš„æ•°æ®,æˆ–è€…æ˜¯åªéœ€åˆå§‹åŒ–ä¸€æ¬¡çš„æ•°æ®.
     }
 	
 	@Override
@@ -50,7 +50,7 @@ public class Screen extends GuiScreen{
 	
 	@Override
 	public void onGuiClosed() {
-		Keyboard.enableRepeatEvents(false); //¹Ø±Õ¼üÅÌÁ¬ĞøÊäÈë
+		Keyboard.enableRepeatEvents(false); //å…³é—­é”®ç›˜è¿ç»­è¾“å…¥
 	}
 	
 	@Override

@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare.GUI.guiMapEdit;
+﻿package ml.cnstl.MapShare.GUI.guiMapEdit;
 
 import net.minecraft.client.gui.*;
 import net.minecraft.util.StatCollector;

@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare.GUI.guiMapEdit;
+ï»¿package ml.cnstl.MapShare.GUI.guiMapEdit;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ public class GuiPositionGet extends GuiScreen
 	private GuiTextField tfPosition1,tfPosition2;
 	private static String tfp1text=",,",tfp2text=",,";
 	/**
-     * Handles keyboard input & ÊµÏÖ°´¼üËÉ¿ª¹Ø±ÕGUI.
+     * Handles keyboard input & å®ç°æŒ‰é”®æ¾å¼€å…³é—­GUI.
      */
 	@Override
 	public void handleKeyboardInput()
@@ -44,7 +44,7 @@ public class GuiPositionGet extends GuiScreen
     public boolean doesGuiPauseGame() {
         return false;
     }
-	//ÒÔÉÏÎªÊµÏÖGuiµÄ´ò¿ª
+	//ä»¥ä¸Šä¸ºå®ç°Guiçš„æ‰“å¼€
 	@Override
 	protected void keyTyped(char par1, int par2)
 	{
@@ -53,7 +53,7 @@ public class GuiPositionGet extends GuiScreen
 
         for (k = 0; k < this.textList.size(); ++k)
         {
-            if(((GuiTextField)this.textList.get(k)).textboxKeyTyped(par1, par2)){} //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(((GuiTextField)this.textList.get(k)).textboxKeyTyped(par1, par2)){} //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 //return;
         }
         for (k = 0; k < this.textList.size(); ++k)
@@ -61,9 +61,9 @@ public class GuiPositionGet extends GuiScreen
         	textListtext.set(k, ((GuiTextField)this.textList.get(k)).getText());
         }
         */
-		tfPosition1.textboxKeyTyped(par1, par2); //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+		tfPosition1.textboxKeyTyped(par1, par2); //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
             //return;
-		tfPosition2.textboxKeyTyped(par1, par2); //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+		tfPosition2.textboxKeyTyped(par1, par2); //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
             //return;
         tfp1text=tfPosition1.getText();
         tfp2text=tfPosition2.getText();

@@ -1,4 +1,4 @@
-package ml.cnstl.bbt.operatewindows.screen;
+ï»¿package ml.cnstl.bbt.operatewindows.screen;
 
 import org.lwjgl.input.Keyboard;
 
@@ -15,17 +15,17 @@ import net.minecraft.util.StatCollector;
 public class ScreenMain extends GuiScreen{
 
 	private GuiScreen parentScreen;
-	private GuiButton btnClose,btnBuild,btnCopy,btnPaste,btnImport,btnExport,btnReplace,btnCancelSel,btngetBBTtool;//Ö÷²Ëµ¥/È«¾Ö°´Å¥
+	private GuiButton btnClose,btnBuild,btnCopy,btnPaste,btnImport,btnExport,btnReplace,btnCancelSel,btngetBBTtool;//ä¸»èœå•/å…¨å±€æŒ‰é’®
 
 	public ScreenMain(GuiScreen parent) {
 		this.parentScreen = parent;
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 	}
 
 	public void initGui()
 	{
-		//Ã¿µ±½çÃæ±»´ò¿ªÊ±µ÷ÓÃ
-		Keyboard.enableRepeatEvents(true); //´ò¿ª¼üÅÌÁ¬ĞøÊäÈë
+		//æ¯å½“ç•Œé¢è¢«æ‰“å¼€æ—¶è°ƒç”¨
+		Keyboard.enableRepeatEvents(true); //æ‰“å¼€é”®ç›˜è¿ç»­è¾“å…¥
 		if(Info.Tool_Mode=="game")
 		{
 			buttonList.add(btnBuild = new GuiButton(0, (int)(width*0.2), (int)(height*0.02+20), (int)(width-width*0.4), 20, StatCollector.translateToLocal("btnBuild.button.gui.bbt")));
@@ -42,7 +42,7 @@ public class ScreenMain extends GuiScreen{
 	public void drawScreen(int par1, int par2, float par3)
 	{
 		//drawDefaultBackground();
-		//ÔÚÕâÀï»æÖÆÎÄ±¾»òÎÆÀíµÈ·Ç¿Ø¼şÄÚÈİ,ÕâÀï»æÖÆµÄ¶«Î÷»á±»¿Ø¼ş(¼´°´¼ü)¸Ç×¡.
+		//åœ¨è¿™é‡Œç»˜åˆ¶æ–‡æœ¬æˆ–çº¹ç†ç­‰éæ§ä»¶å†…å®¹,è¿™é‡Œç»˜åˆ¶çš„ä¸œè¥¿ä¼šè¢«æ§ä»¶(å³æŒ‰é”®)ç›–ä½.
 		super.drawScreen(par1,par2,par3);
 			drawCenteredString(fontRendererObj, StatCollector.translateToLocal("title.gui.bbt"), width/2, (int)(2), 0xFFFF00);
 	}
@@ -82,12 +82,12 @@ public class ScreenMain extends GuiScreen{
         	EntityClientPlayerMP player=Minecraft.getMinecraft().thePlayer;
         	player.inventory.addItemStackToInventory(new ItemStack(Info.PosSelector));
         }
-        //Ö÷²Ëµ¥/È«¾Ö°´Å¥ÊÂ¼şÏìÓ¦
+        //ä¸»èœå•/å…¨å±€æŒ‰é’®äº‹ä»¶å“åº”
     }
 	
 	@Override
 	public void onGuiClosed() {
-		Keyboard.enableRepeatEvents(false); //¹Ø±Õ¼üÅÌÁ¬ĞøÊäÈë
+		Keyboard.enableRepeatEvents(false); //å…³é—­é”®ç›˜è¿ç»­è¾“å…¥
 	}
 	
 	@Override

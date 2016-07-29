@@ -1,4 +1,4 @@
-package ml.cnstl.bbt;
+ï»¿package ml.cnstl.bbt;
 
 import net.minecraft.block.*;
 import net.minecraft.client.Minecraft;
@@ -41,16 +41,16 @@ public class Block_operate
 		Block block=Block.getBlockById(blockid);
 		world.setBlock(x, y, z, block, blockdata, 3);
 	}
-	//»ù±¾²Ù×÷·â×°
+	//åŸºæœ¬æ“ä½œå°è£…
 	public void Build(int xf,int yf,int zf,int xs,int ys,int zs,int Blocktype,int Blockdata)
 	{
 		int xl,yl,zl,xb,yb,zb;
 		int bc=0;
-		//¶¯Ì¬±äÁ¿Çø
+		//åŠ¨æ€å˜é‡åŒº
 		if(xf<xs){xl=xf;xb=xs;}else{xl=xs;xb=xf;}
 		if(yf<ys){yl=yf;yb=ys;}else{yl=ys;yb=yf;}
 		if(zf<zs){zl=zf;zb=zs;}else{zl=zs;zb=zf;}
-		//´óĞ¡ÅÅĞò
+		//å¤§å°æ’åº
 		for(int i=xl;i<=xb;i++)
 		{
 			for(int j=yl;j<=yb;j++)
@@ -62,17 +62,17 @@ public class Block_operate
 				}
 			}
 		}
-		System.out.println("¹²"+bc+"¸ö·½¿éÒÑ±»¸üĞÂ");
+		System.out.println("å…±"+bc+"ä¸ªæ–¹å—å·²è¢«æ›´æ–°");
 	}
 	public void Replace(int xf,int yf,int zf,int xs,int ys,int zs,int blockb,int datab,int blocka,int dataa,boolean ifnodata,boolean ifsave)
 	{
 		int xl,yl,zl,xb,yb,zb;
 		int bc=0;
-		//¶¯Ì¬±äÁ¿Çø
+		//åŠ¨æ€å˜é‡åŒº
 		if(xf<xs){xl=xf;xb=xs;}else{xl=xs;xb=xf;}
 		if(yf<ys){yl=yf;yb=ys;}else{yl=ys;yb=yf;}
 		if(zf<zs){zl=zf;zb=zs;}else{zl=zs;zb=zf;}
-		//´óĞ¡ÅÅĞò
+		//å¤§å°æ’åº
 		for(int i=xl;i<=xb;i++)
 		{
 			for(int j=yl;j<=yb;j++)
@@ -120,19 +120,19 @@ public class Block_operate
 				}
 			}
 		}
-		System.out.println("¹²"+bc+"¸ö·½¿éÒÑ±»Ìæ»»");
+		System.out.println("å…±"+bc+"ä¸ªæ–¹å—å·²è¢«æ›¿æ¢");
 	}
 	public void Copy(int xf,int yf,int zf,int xs,int ys,int zs)
 	{
 		int xl,yl,zl,xb,yb,zb;
-		//¶¯Ì¬±äÁ¿Çø
+		//åŠ¨æ€å˜é‡åŒº
 		if(xf<xs){xl=xf;xb=xs;}else{xl=xs;xb=xf;}
 		if(yf<ys){yl=yf;yb=ys;}else{yl=ys;yb=yf;}
 		if(zf<zs){zl=zf;zb=zs;}else{zl=zs;zb=zf;}
-		//´óĞ¡ÅÅĞò
+		//å¤§å°æ’åº
 		Info.BlockType=new int[xb-xl+1][yb-yl+1][zb-zl+1];
 		Info.BlockData=new int[xb-xl+1][yb-yl+1][zb-zl+1];
-		//Êı×éÉú³É
+		//æ•°ç»„ç”Ÿæˆ
 		for(int i=0;i<=xb-xl;i++)
 		{
 			for(int j=0;j<=yb-yl;j++)
@@ -144,14 +144,14 @@ public class Block_operate
 				}
 			}
 		}
-		//Êı×é¸³Öµ
+		//æ•°ç»„èµ‹å€¼
 	}
 	public void Paste(int x,int y,int z,String offset,String mode)
 	{
 		if(Info.whethercopied)
 		{
 			int xlength=Info.BlockType.length,ylength=Info.BlockType[0].length,zlength=Info.BlockType[0][0].length,offsetx,offsety,offsetz;
-			//¶¯Ì¬±äÁ¿Çø
+			//åŠ¨æ€å˜é‡åŒº
 			if((offset=="none")|(offset=="diagonal_1")|(offset=="")){offsetx=0;offsety=0;offsetz=0;}
 			else if(offset=="buttom_center"){offsetx=(int) (0-(Math.ceil(xlength/2)-1));offsety=0;offsetz=(int) (0-(Math.ceil(zlength/2)-1));}
 			else if(offset=="diagonal_2"){offsetx=1-xlength;offsety=0;offsetz=0;}
@@ -230,7 +230,7 @@ public class Block_operate
 			Info.previewstr="";
 		}
 	}
-	//ÕæÕıµÄ½Ó¿Ú
+	//çœŸæ­£çš„æ¥å£
 	public boolean isServerWorld()
 	{
 		if(MinecraftServer.getServer().getEntityWorld()==null){return false;}else{return true;}
@@ -245,5 +245,5 @@ public class Block_operate
 		}
 		return out;
 	}
-	//¸¨Öúº¯Êı
+	//è¾…åŠ©å‡½æ•°
 }

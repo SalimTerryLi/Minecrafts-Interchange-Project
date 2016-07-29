@@ -1,4 +1,4 @@
-package ml.cnstl.bbt.operatewindows.screen;
+ï»¿package ml.cnstl.bbt.operatewindows.screen;
 
 import org.lwjgl.input.Keyboard;
 
@@ -18,13 +18,13 @@ public class ScreenBuild extends GuiScreen{
 
 	public ScreenBuild(GuiScreen parent) {
 		this.parentScreen = parent;
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êı´æ¸ù
+		// TODO è‡ªåŠ¨ç”Ÿæˆçš„æ„é€ å‡½æ•°å­˜æ ¹
 	}
 
 	public void initGui()
 	{
-		//Ã¿µ±½çÃæ±»´ò¿ªÊ±µ÷ÓÃ
-		Keyboard.enableRepeatEvents(true); //´ò¿ª¼üÅÌÁ¬ĞøÊäÈë
+		//æ¯å½“ç•Œé¢è¢«æ‰“å¼€æ—¶è°ƒç”¨
+		Keyboard.enableRepeatEvents(true); //æ‰“å¼€é”®ç›˜è¿ç»­è¾“å…¥
 		if(Info.Tool_Mode=="game")
 		{
 			tfBlockID=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
@@ -37,17 +37,17 @@ public class ScreenBuild extends GuiScreen{
 		}
 	}
 	protected void keyTyped(char par1, int par2) {
-		if(tfBlockID.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+		if(tfBlockID.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
 			return;
-		if(tfBlockType.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+		if(tfBlockType.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
 			return;
-		if(tfPosition.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+		if(tfPosition.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
 			return;
 		super.keyTyped(par1, par2);
 	}
 	@Override
 	protected void mouseClicked(int par1, int par2, int par3) {
-		tfBlockID.mouseClicked(par1, par2, par3); //µ÷ÓÃÎÄ±¾¿òµÄÊó±êµã»÷¼ì²é
+		tfBlockID.mouseClicked(par1, par2, par3); //è°ƒç”¨æ–‡æœ¬æ¡†çš„é¼ æ ‡ç‚¹å‡»æ£€æŸ¥
 		tfBlockType.mouseClicked(par1, par2, par3);
 		tfPosition.mouseClicked(par1, par2, par3);
 		super.mouseClicked(par1, par2, par3);
@@ -98,7 +98,7 @@ public class ScreenBuild extends GuiScreen{
 	
 	@Override
 	public void onGuiClosed() {
-		Keyboard.enableRepeatEvents(false); //¹Ø±Õ¼üÅÌÁ¬ĞøÊäÈë
+		Keyboard.enableRepeatEvents(false); //å…³é—­é”®ç›˜è¿ç»­è¾“å…¥
 	}
 	
 	@Override

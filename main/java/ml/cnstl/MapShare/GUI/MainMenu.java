@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare.GUI;
+ï»¿package ml.cnstl.MapShare.GUI;
 
 import java.util.*;
 import org.lwjgl.input.Keyboard;
@@ -33,9 +33,9 @@ public class MainMenu extends GuiScreen
 	@Override
 	protected void mouseClicked(int par1, int par2, int par3)
 	{
-		if(par3==0)//×ó¼üµ¥»÷
+		if(par3==0)//å·¦é”®å•å‡»
 		{
-			if((par1<((width-3*80)/4+80))&(par1>((width-3*80)/4))&(par2<height*0.2+80+20)&(par2>height*0.2)){mc.displayGuiScreen(Data.lastShowMapEditGui);}//ÇøÓòÅĞ¶¨*ÕâÀï×÷Îª²âÊÔ´úÂë
+			if((par1<((width-3*80)/4+80))&(par1>((width-3*80)/4))&(par2<height*0.2+80+20)&(par2>height*0.2)){mc.displayGuiScreen(Data.lastShowMapEditGui);}//åŒºåŸŸåˆ¤å®š*è¿™é‡Œä½œä¸ºæµ‹è¯•ä»£ç 
 			else if((par1<((width-3*80)/2+80+80))&(par1>((width-3*80)/2+80))&(par2<height*0.2+80+20)&(par2>height*0.2)){System.out.println("2");}
 			else if((par1<((width-3*80)/4*3+2*80+80))&(par1>((width-3*80)/4*3+2*80))&(par2<height*0.2+80+20)&(par2>height*0.2)){System.out.println("3");}
 			else{Minecraft mc = Minecraft.getMinecraft();mc.setIngameFocus();}
@@ -50,31 +50,31 @@ public class MainMenu extends GuiScreen
         int mousey = height - Mouse.getY() * height / mc.displayHeight - 1;
         
         int color1=0xFFFFFF,color2=0xFFFFFF,color3=0xFFFFFF;
-    	if((mousex<((width-3*80)/4+80))&(mousex>((width-3*80)/4))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){color1=0x44CEF6;}//ÇøÓòÅĞ¶¨
+    	if((mousex<((width-3*80)/4+80))&(mousex>((width-3*80)/4))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){color1=0x44CEF6;}//åŒºåŸŸåˆ¤å®š
     	else if((mousex<((width-3*80)/2+80+80))&(mousex>((width-3*80)/2+80))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){color2=0x44CEF6;}
     	else if((mousex<((width-3*80)/4*3+2*80+80))&(mousex>((width-3*80)/4*3+2*80))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){color3=0x44CEF6;}
     	else{}
 		
-    	drawCenteredString(fontRendererObj, "", 0, 0, color1);//ÓÃÀ´ÖÆÔìÑÕÉ«¸ÉÈÅ
+    	drawCenteredString(fontRendererObj, "", 0, 0, color1);//ç”¨æ¥åˆ¶é€ é¢œè‰²å¹²æ‰°
 		texture = new ResourceLocation(Data.MOD_ID, "textures/gui/mainmenu/world_operate.png"); 
 		mc.renderEngine.bindTexture(texture);
 		func_146110_a((int) ((width-3*80)/4), (int) (height*0.2), 0, 0, 80, 80, 80, 80);//drawModalRectWithCustomSizedTexture()
 		drawCenteredString(fontRendererObj, StatCollector.translateToLocal("world-operate.mainmenu.gui.ms"), (int) ((width-3*80)/4+40), (int)(height*0.2+80+10), color1);
-		drawCenteredString(fontRendererObj, "", 0, 0, 0xFFFFFF);//ÓÃÀ´ÅÅ³ıÑÕÉ«¸ÉÈÅ
-		drawCenteredString(fontRendererObj, "", 0, 0, color2);//ÓÃÀ´ÖÆÔìÑÕÉ«¸ÉÈÅ
+		drawCenteredString(fontRendererObj, "", 0, 0, 0xFFFFFF);//ç”¨æ¥æ’é™¤é¢œè‰²å¹²æ‰°
+		drawCenteredString(fontRendererObj, "", 0, 0, color2);//ç”¨æ¥åˆ¶é€ é¢œè‰²å¹²æ‰°
 		texture = new ResourceLocation(Data.MOD_ID, "textures/gui/mainmenu/map_share.png"); 
 		mc.renderEngine.bindTexture(texture);
 		func_146110_a((int) ((width-3*80)/2+80), (int) (height*0.2), 0, 0, 80, 80, 80, 80);//drawModalRectWithCustomSizedTexture()
 		drawCenteredString(fontRendererObj, StatCollector.translateToLocal("mapshare.mainmenu.gui.ms"), (int) ((width-3*80)/2+80+40), (int)(height*0.2+80+10), color2);
-		drawCenteredString(fontRendererObj, "", 0, 0, 0xFFFFFF);//ÓÃÀ´ÅÅ³ıÑÕÉ«¸ÉÈÅ
-		drawCenteredString(fontRendererObj, "", 0, 0, color3);//ÓÃÀ´ÖÆÔìÑÕÉ«¸ÉÈÅ
+		drawCenteredString(fontRendererObj, "", 0, 0, 0xFFFFFF);//ç”¨æ¥æ’é™¤é¢œè‰²å¹²æ‰°
+		drawCenteredString(fontRendererObj, "", 0, 0, color3);//ç”¨æ¥åˆ¶é€ é¢œè‰²å¹²æ‰°
 		texture = new ResourceLocation(Data.MOD_ID, "textures/gui/mainmenu/misc.png"); 
 		mc.renderEngine.bindTexture(texture);
 		func_146110_a((int) ((width-3*80)/4*3+2*80), (int) (height*0.2), 0, 0, 80, 80, 80, 80);//drawModalRectWithCustomSizedTexture()
 		drawCenteredString(fontRendererObj, StatCollector.translateToLocal("misc.mainmenu.gui.ms"), (int) ((width-3*80)/4*3+2*80+40), (int)(height*0.2+80+10), color3);
-		drawCenteredString(fontRendererObj, "", 0, 0, 0xFFFFFF);//ÓÃÀ´ÅÅ³ıÑÕÉ«¸ÉÈÅ
+		drawCenteredString(fontRendererObj, "", 0, 0, 0xFFFFFF);//ç”¨æ¥æ’é™¤é¢œè‰²å¹²æ‰°
 		
-    	if((mousex<((width-3*80)/4+80))&(mousex>((width-3*80)/4))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){drawString(fontRendererObj,StatCollector.translateToLocal("me.toolstip.mainmenu.gui.ms"),2, (int)(height*0.966), 0xFFFFFF);}//ÇøÓòÅĞ¶¨
+    	if((mousex<((width-3*80)/4+80))&(mousex>((width-3*80)/4))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){drawString(fontRendererObj,StatCollector.translateToLocal("me.toolstip.mainmenu.gui.ms"),2, (int)(height*0.966), 0xFFFFFF);}//åŒºåŸŸåˆ¤å®š
     	else if((mousex<((width-3*80)/2+80+80))&(mousex>((width-3*80)/2+80))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){drawString(fontRendererObj,StatCollector.translateToLocal("s.toolstip.mainmenu.gui.ms"),2, (int)(height*0.966), 0xFFFFFF);}
     	else if((mousex<((width-3*80)/4*3+2*80+80))&(mousex>((width-3*80)/4*3+2*80))&(mousey<height*0.2+80+20)&(mousey>height*0.2)){drawString(fontRendererObj,StatCollector.translateToLocal("misc.toolstip.mainmenu.gui.ms"),2, (int)(height*0.966), 0xFFFFFF);}
     	else{drawString(fontRendererObj,StatCollector.translateToLocal("none.toolstip.mainmenu.gui.ms"),2, (int)(height*0.966), 0xFFFFFF);}

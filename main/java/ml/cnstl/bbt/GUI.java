@@ -1,4 +1,4 @@
-package ml.cnstl.bbt;
+ï»¿package ml.cnstl.bbt;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
@@ -19,18 +19,18 @@ public class GUI extends GuiScreen{
        
     public GUI(GuiScreen parent,String GUItype)
     {
-         parentScreen = parent; //¼ÇÏÂÊÇÄÄ¸ö½çÃæ´ò¿ªÁËËü,ÒÔ±ãÒÔºó·µ»ØÄÇ¸ö½çÃæ
+         parentScreen = parent; //è®°ä¸‹æ˜¯å“ªä¸ªç•Œé¢æ‰“å¼€äº†å®ƒ,ä»¥ä¾¿ä»¥åè¿”å›é‚£ä¸ªç•Œé¢
          this.GUItype=GUItype;
-        //ÔÚÕâÀï³õÊ¼»¯Óë½çÃæÎŞ¹ØµÄÊı¾İ,»òÕßÊÇÖ»Ğè³õÊ¼»¯Ò»´ÎµÄÊı¾İ.
+        //åœ¨è¿™é‡Œåˆå§‹åŒ–ä¸ç•Œé¢æ— å…³çš„æ•°æ®,æˆ–è€…æ˜¯åªéœ€åˆå§‹åŒ–ä¸€æ¬¡çš„æ•°æ®.
     }
     private GuiLabel lblMainTitle;
-    private GuiButton btnClose,btnBuild,btnCopy,btnPaste,btnImport,btnExport,btnReplace,btnCancelSel,btngetBBTtool;//Ö÷²Ëµ¥/È«¾Ö°´Å¥
+    private GuiButton btnClose,btnBuild,btnCopy,btnPaste,btnImport,btnExport,btnReplace,btnCancelSel,btngetBBTtool;//ä¸»èœå•/å…¨å±€æŒ‰é’®
     private GuiButton btnPosGet,btnBuilding,btnReplacing,btnEnabledType,btnCoping,btnisKeptID,btnisKeptType,btngetFootStandOnpos,btnPasting,btnPosGetonlyone,btnIgnoreempyt,btnPreview,btnChangePreview,btnClosePreview,btnExporting,btnImporting;
     private GuiTextField tfBlockID,tfBlockType,tfreBlockID,tfreBlockType,tfPosition;
     public void initGui()
     {
-        //Ã¿µ±½çÃæ±»´ò¿ªÊ±µ÷ÓÃ
-    	Keyboard.enableRepeatEvents(true); //´ò¿ª¼üÅÌÁ¬ĞøÊäÈë
+        //æ¯å½“ç•Œé¢è¢«æ‰“å¼€æ—¶è°ƒç”¨
+    	Keyboard.enableRepeatEvents(true); //æ‰“å¼€é”®ç›˜è¿ç»­è¾“å…¥
     	if(Info.Tool_Mode=="game")
     	{
     		if(GUItype=="GUI_main")
@@ -129,12 +129,12 @@ public class GUI extends GuiScreen{
     		buttonList.add(btngetFootStandOnpos = new GuiButton(0, (int)(width/2-100), (int)(height*0.6), 200, 20, StatCollector.translateToLocal("btngetfootpos.button.gui.bbt")));
     		buttonList.add(btnClose = new GuiButton(0, (int)(width-width*0.01-80), (int)(height-height*0.1), 80, 20, StatCollector.translateToLocal("btnClose.button.gui.bbt")));
     	}
-    	//ÕâÀï²¿Êğ¿Ø¼ş
+    	//è¿™é‡Œéƒ¨ç½²æ§ä»¶
     	/*
     	tfInput = new GuiTextField(fontRendererObj, (int)(width*0.02+80), (int)(height*0.02+20), 300, 20);
-    	tfInput.setMaxStringLength(64); //ÉèÖÃ×î´ó³¤¶È,¿ÉÊ¡ÂÔ
-    	tfInput.setFocused(false); //ÉèÖÃÊÇ·ñÎª½¹µã
-    	tfInput.setCanLoseFocus(true); //ÉèÖÃÎª¿ÉÒÔ±»È¡Ïû½¹µã
+    	tfInput.setMaxStringLength(64); //è®¾ç½®æœ€å¤§é•¿åº¦,å¯çœç•¥
+    	tfInput.setFocused(false); //è®¾ç½®æ˜¯å¦ä¸ºç„¦ç‚¹
+    	tfInput.setCanLoseFocus(true); //è®¾ç½®ä¸ºå¯ä»¥è¢«å–æ¶ˆç„¦ç‚¹
     	*/
     }
     
@@ -142,34 +142,34 @@ public class GUI extends GuiScreen{
     protected void keyTyped(char par1, int par2) {
     	if(GUItype=="GUI_Build")
     	{
-    		if(tfBlockID.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+    		if(tfBlockID.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
-            if(tfBlockType.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfBlockType.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
-            if(tfPosition.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfPosition.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
        	}
     	else if(GUItype=="GUI_Replace")
     	{
-    		if(tfBlockID.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+    		if(tfBlockID.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
-            if(tfBlockType.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfBlockType.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
-            if(tfPosition.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfPosition.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
-            if(tfreBlockID.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfreBlockID.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
-            if(tfreBlockType.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfreBlockType.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
     	}
     	else if(GUItype=="GUI_Copy")
     	{
-            if(tfPosition.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfPosition.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
        	}
     	else if(GUItype=="GUI_Paste")
     	{
-            if(tfPosition.textboxKeyTyped(par1, par2)) //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(tfPosition.textboxKeyTyped(par1, par2)) //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 return;
        	}
     	super.keyTyped(par1, par2);
@@ -183,15 +183,15 @@ public class GUI extends GuiScreen{
         }
         else if(GUItype=="GUI_Build")
 		{
-          	tfBlockID.mouseClicked(par1, par2, par3); //µ÷ÓÃÎÄ±¾¿òµÄÊó±êµã»÷¼ì²é
+          	tfBlockID.mouseClicked(par1, par2, par3); //è°ƒç”¨æ–‡æœ¬æ¡†çš„é¼ æ ‡ç‚¹å‡»æ£€æŸ¥
           	tfBlockType.mouseClicked(par1, par2, par3);
           	tfPosition.mouseClicked(par1, par2, par3);
         }
 		else if(GUItype=="GUI_Replace")
 		{
-			tfBlockID.mouseClicked(par1, par2, par3); //µ÷ÓÃÎÄ±¾¿òµÄÊó±êµã»÷¼ì²é
+			tfBlockID.mouseClicked(par1, par2, par3); //è°ƒç”¨æ–‡æœ¬æ¡†çš„é¼ æ ‡ç‚¹å‡»æ£€æŸ¥
           	tfBlockType.mouseClicked(par1, par2, par3);
-          	tfreBlockID.mouseClicked(par1, par2, par3); //µ÷ÓÃÎÄ±¾¿òµÄÊó±êµã»÷¼ì²é
+          	tfreBlockID.mouseClicked(par1, par2, par3); //è°ƒç”¨æ–‡æœ¬æ¡†çš„é¼ æ ‡ç‚¹å‡»æ£€æŸ¥
           	tfreBlockType.mouseClicked(par1, par2, par3);
           	tfPosition.mouseClicked(par1, par2, par3);
 		}
@@ -216,7 +216,7 @@ public class GUI extends GuiScreen{
     
     @Override
     public void onGuiClosed() {
-        Keyboard.enableRepeatEvents(false); //¹Ø±Õ¼üÅÌÁ¬ĞøÊäÈë
+        Keyboard.enableRepeatEvents(false); //å…³é—­é”®ç›˜è¿ç»­è¾“å…¥
         if(GUItype=="GUI_main")
         {
          	
@@ -253,7 +253,7 @@ public class GUI extends GuiScreen{
     public void drawScreen(int par1, int par2, float par3)
     {
         drawDefaultBackground();
-        //ÔÚÕâÀï»æÖÆÎÄ±¾»òÎÆÀíµÈ·Ç¿Ø¼şÄÚÈİ,ÕâÀï»æÖÆµÄ¶«Î÷»á±»¿Ø¼ş(¼´°´¼ü)¸Ç×¡.
+        //åœ¨è¿™é‡Œç»˜åˆ¶æ–‡æœ¬æˆ–çº¹ç†ç­‰éæ§ä»¶å†…å®¹,è¿™é‡Œç»˜åˆ¶çš„ä¸œè¥¿ä¼šè¢«æ§ä»¶(å³æŒ‰é”®)ç›–ä½.
         super.drawScreen(par1,par2,par3);
         if(GUItype=="GUI_main")
         {
@@ -289,8 +289,8 @@ public class GUI extends GuiScreen{
 		{
 			
 		}
-        //ËùÓĞµÄÎÄ±¾¿òµÄ»æÖÆ
-        //ÔÚÕâÀï»æÖÆÎÄ±¾»òÎÆÀíµÈ·Ç¿Ø¼şÄÚÈİ,ÕâÀï»æÖÆµÄ¶«Î÷»á¸ÇÔÚ¿Ø¼ş(¼´°´¼ü)Ö®ÉÏ.
+        //æ‰€æœ‰çš„æ–‡æœ¬æ¡†çš„ç»˜åˆ¶
+        //åœ¨è¿™é‡Œç»˜åˆ¶æ–‡æœ¬æˆ–çº¹ç†ç­‰éæ§ä»¶å†…å®¹,è¿™é‡Œç»˜åˆ¶çš„ä¸œè¥¿ä¼šç›–åœ¨æ§ä»¶(å³æŒ‰é”®)ä¹‹ä¸Š.
         if(GUItype=="GUI_main")
         {
          	drawCenteredString(fontRendererObj, StatCollector.translateToLocal("title.gui.bbt"), width/2, (int)(2), 0xFFFF00);
@@ -417,7 +417,7 @@ public class GUI extends GuiScreen{
         		mc.displayGuiScreen(parentScreen);
         	}
         }
-        //Ö÷²Ëµ¥/È«¾Ö°´Å¥ÊÂ¼şÏìÓ¦
+        //ä¸»èœå•/å…¨å±€æŒ‰é’®äº‹ä»¶å“åº”
         else if(button==btnPosGet)
         {
         	Info.Tool_Mode="setpositiontwo";
@@ -443,7 +443,7 @@ public class GUI extends GuiScreen{
         		}catch(Exception exc){}
         	}
         }
-        //GUI_BuildÊÂ¼şÏìÓ¦
+        //GUI_Buildäº‹ä»¶å“åº”
         else if(button==btnEnabledType)
         {
         	tfreBlockType.setVisible(!tfreBlockType.getVisible());
@@ -479,7 +479,7 @@ public class GUI extends GuiScreen{
         		op.Replace(pos[0], pos[1], pos[2], pos[3], pos[4], pos[5], blockb, datab, blocka, dataa, ifnodata, ifsave);
     		}catch(Exception exc){}
         }
-        //GUI_ReplaceÊÂ¼şÏìÓ¦
+        //GUI_Replaceäº‹ä»¶å“åº”
         else if(button==btnCoping)
         {
         	try
@@ -494,7 +494,7 @@ public class GUI extends GuiScreen{
         		Info.whethercopied=true;
     		}catch(Exception exc){}
         }
-        //GUI_CopyÊÂ¼şÏìÓ¦
+        //GUI_Copyäº‹ä»¶å“åº”
         else if(button==btnPasting)
         {
         	op.clearpreview();
@@ -553,13 +553,13 @@ public class GUI extends GuiScreen{
         {
         	op.clearpreview();
         }
-        //GUI_PasteÊÂ¼şÏìÓ¦
+        //GUI_Pasteäº‹ä»¶å“åº”
         else if(button==btnExporting)
         {
         	try {
 				File_operate.exportfile("");
 			} catch (Exception e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				e.printStackTrace();
 			}
         }
@@ -568,7 +568,7 @@ public class GUI extends GuiScreen{
         	try {
 				File_operate.importfile("", false);
 			} catch (Exception e) {
-				// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+				// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 				e.printStackTrace();
 			}
         }

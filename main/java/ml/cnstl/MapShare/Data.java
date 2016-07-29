@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare;
+﻿package ml.cnstl.MapShare;
 
 import org.lwjgl.input.Keyboard;
 import ml.cnstl.MapShare.GUI.guiMapEdit.*;

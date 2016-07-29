@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare.GUI.guiMapEdit;
+ï»¿package ml.cnstl.MapShare.GUI.guiMapEdit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ public class MapEditMain extends GuiScreen
         
         if(isDrawDefaultBackground()){drawDefaultBackground();}
 		
-		drawRect_((int)(super.width*0.1), 2, (int)(super.width*0.1+1), (int)(super.height*0.96-2), 0x80FFFFFF);//×İ·Ö½çÏß
+		drawRect_((int)(super.width*0.1), 2, (int)(super.width*0.1+1), (int)(super.height*0.96-2), 0x80FFFFFF);//çºµåˆ†ç•Œçº¿
 		{
 			if((mousex>(super.width*0.1-30)/2)&(mousex<super.width*0.1)&(mousey>(super.height*0.96-25-180)/2)&(mousey<(super.height*0.96-25-180)/2+30)|(Data.lastShowMapEditGui.equals(Data.GuiBuild)))
 			{
@@ -103,7 +103,7 @@ public class MapEditMain extends GuiScreen
 		}
 		drawSubScreen(par1,par2,par3);
 		
-		drawRect_(2, (int)(super.height*0.96), super.width-2, (int) (super.height*0.96+1), 0x80FFFFFF);//ºá·Ö½çÏß
+		drawRect_(2, (int)(super.height*0.96), super.width-2, (int) (super.height*0.96+1), 0x80FFFFFF);//æ¨ªåˆ†ç•Œçº¿
 		drawString_(fontRendererObj,ToolsTip,2, (int)(super.height*0.966), 0xFFFFFF);ToolsTip="";
 		drawString_(fontRendererObj,"MapShare "+Data.MOD_VERSION,(int)(super.width-fontRendererObj.getStringWidth("MapShare "+Data.MOD_VERSION)-2), (int)(super.height*0.966), 0xFFFFFF);
 		super.drawScreen(par1, par2, par3);
@@ -112,7 +112,7 @@ public class MapEditMain extends GuiScreen
 	@Override
 	protected void mouseClicked(int par1, int par2, int par3)
 	{
-		if(par3==0)//×ó¼üµ¥»÷
+		if(par3==0)//å·¦é”®å•å‡»
 		{
 			if((par1>(super.width*0.1-30)/2)&(par1<super.width*0.1)&(par2>(super.height*0.96-25-180)/2)&(par2<(super.height*0.96-25-180)/2+30))
 			{
@@ -158,7 +158,7 @@ public class MapEditMain extends GuiScreen
 		SubkeyTyped(par1, par2);
 		super.keyTyped(par1, par2);
 	}
-	//ÒÔÉÏÖ÷Ìå
+	//ä»¥ä¸Šä¸»ä½“
 	public static void drawRect_(int p_73734_0_, int p_73734_1_, int p_73734_2_, int p_73734_3_, int p_73734_4_)
 	{
 		net.minecraft.client.gui.Gui.drawRect( p_73734_0_,  p_73734_1_,  p_73734_2_,  p_73734_3_,  p_73734_4_);
@@ -177,7 +177,7 @@ public class MapEditMain extends GuiScreen
 	}
 	protected List textList = new ArrayList();
 	protected List textListtext=new ArrayList();
-	//ÒÔÉÏ·â×°
+	//ä»¥ä¸Šå°è£…
 	public int height=(int) (super.height*0.96),width=(int) (super.width-(super.width*0.1+1));
 	private int intxStartPos=(int) (super.width*0.1+1),intyStartPos=0;
 	protected boolean isDrawDefaultBackground(){return true;}
@@ -221,7 +221,7 @@ public class MapEditMain extends GuiScreen
             ((GuiTextField)this.textList.get(k)).drawTextBox();
         }
 	}
-	//ÒÔÉÏ×ÓÀàµ÷ÓÃ
+	//ä»¥ä¸Šå­ç±»è°ƒç”¨
 	protected void SubmouseClicked(int par1, int par2, int par3)
 	{
 		int k;
@@ -237,7 +237,7 @@ public class MapEditMain extends GuiScreen
 
         for (k = 0; k < this.textList.size(); ++k)
         {
-            if(((GuiTextField)this.textList.get(k)).textboxKeyTyped(par1, par2)){} //ÏòÎÄ±¾¿ò´«ÈëÊäÈëµÄÄÚÈİ
+            if(((GuiTextField)this.textList.get(k)).textboxKeyTyped(par1, par2)){} //å‘æ–‡æœ¬æ¡†ä¼ å…¥è¾“å…¥çš„å†…å®¹
                 //return;
         }
         for (k = 0; k < this.textList.size(); ++k)
@@ -245,7 +245,7 @@ public class MapEditMain extends GuiScreen
         	textListtext.set(k, ((GuiTextField)this.textList.get(k)).getText());
         }
 	}
-	//ÒÔÉÏ×ÓÀàÓÅ»¯
+	//ä»¥ä¸Šå­ç±»ä¼˜åŒ–
 	
 	
 }

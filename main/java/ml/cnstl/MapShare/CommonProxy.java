@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare;
+ï»¿package ml.cnstl.MapShare;
 
 import org.lwjgl.input.Keyboard;
 
@@ -32,9 +32,9 @@ public class CommonProxy
                 Minecraft mc = Minecraft.getMinecraft();
                 mc.displayGuiScreen(new MainMenu());
             }
-            if(Keyboard.getEventKey()==Data.kbShowGuiPositionGet.getKeyCode())//Á´½Óµ½
+            if(Keyboard.getEventKey()==Data.kbShowGuiPositionGet.getKeyCode())//é“¾æŽ¥åˆ°
             {								//ml.cnstl.MapShare.GUI.guiMapEdit.GuiPositionGet
-            	if(Keyboard.getEventKeyState())//ÊµÏÖKeyDown´ò¿ªGUI
+            	if(Keyboard.getEventKeyState())//å®žçŽ°KeyDownæ‰“å¼€GUI
             	{
             		Minecraft mc = Minecraft.getMinecraft();
                     mc.displayGuiScreen(new GuiPositionGet());

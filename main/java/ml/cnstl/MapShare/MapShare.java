@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare;
+锘縫ackage ml.cnstl.MapShare;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
@@ -39,4 +39,4 @@ public class MapShare
 }
 
 
-//Minecraft mc = Minecraft.getMinecraft();mc.setIngameFocus();用于返回游戏界面
+//Minecraft mc = Minecraft.getMinecraft();mc.setIngameFocus();鐢ㄤ簬杩斿洖娓告垙鐣岄潰

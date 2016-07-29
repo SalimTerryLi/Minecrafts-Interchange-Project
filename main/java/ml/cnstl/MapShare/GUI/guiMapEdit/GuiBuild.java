@@ -1,4 +1,4 @@
-package ml.cnstl.MapShare.GUI.guiMapEdit;
+﻿package ml.cnstl.MapShare.GUI.guiMapEdit;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiTextField;

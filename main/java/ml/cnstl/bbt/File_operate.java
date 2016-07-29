@@ -1,4 +1,4 @@
-package ml.cnstl.bbt;
+ï»¿package ml.cnstl.bbt;
 
 import java.awt.FileDialog;
 import java.awt.Frame;
@@ -32,7 +32,7 @@ public class File_operate {
 			String mcpelevel="CE-1.7.10";
 			String outstring="",bbtlevel=Info.MOD_VERSION,bllevel="";
 			file_append(filename,mcpelevel+";"+bbtlevel+";"+bllevel+";"+new Date().toString()+"|"+Info.BlockType.length+";"+Info.BlockType[0].length+";"+Info.BlockType[0][0].length+"|");
-			//Éú³ÉÎÄ¼şÍ·ĞòÁĞ
+			//ç”Ÿæˆæ–‡ä»¶å¤´åºåˆ—
 			for(int i=0;i<Info.BlockType.length;i++)
 			{
 				for(int j=0;j<Info.BlockType[0].length;j++)
@@ -50,7 +50,7 @@ public class File_operate {
 					}
 				}
 			}
-			//Éú³ÉBlocktypeĞòÁĞ
+			//ç”ŸæˆBlocktypeåºåˆ—
 			for(int i=0;i<Info.BlockType.length;i++)
 			{
 				for(int j=0;j<Info.BlockType[0].length;j++)
@@ -68,7 +68,7 @@ public class File_operate {
 					}
 				}
 			}
-			//Éú³ÉBlockdataĞòÁĞ
+			//ç”ŸæˆBlockdataåºåˆ—
 		}
 	}
 	public static void importfile(String filename,boolean whetherverification) throws IOException
@@ -96,7 +96,7 @@ public class File_operate {
 				String Bdata[]=temp1[3].split(";");
 				Info.BlockType=new int[xlength][ylength][ylength];
 				Info.BlockData=new int[xlength][ylength][ylength];
-				//Êı×éÉú³É
+				//æ•°ç»„ç”Ÿæˆ
 				System.out.println(""+Info.BlockType.length);
 				System.out.println(""+Info.BlockType[0].length);
 				System.out.println(""+Info.BlockType[0][0].length);
@@ -143,17 +143,17 @@ public class File_operate {
 		try {
 			out = new java.io.FileOutputStream(filename, true);
 
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 
 
 			out.write(new java.lang.String(text).getBytes());
 
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 
 
 			out.close();
 		} catch (IOException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		}
 	}
