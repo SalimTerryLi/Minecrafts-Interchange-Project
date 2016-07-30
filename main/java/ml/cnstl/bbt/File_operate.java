@@ -32,7 +32,7 @@ public class File_operate {
 			String mcpelevel="CE-1.7.10";
 			String outstring="",bbtlevel=Info.MOD_VERSION,bllevel="";
 			file_append(filename,mcpelevel+";"+bbtlevel+";"+bllevel+";"+new Date().toString()+"|"+Info.BlockType.length+";"+Info.BlockType[0].length+";"+Info.BlockType[0][0].length+"|");
-			//Éú³ÉÎÄ¼þÍ·ÐòÁÐ
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Í·ï¿½ï¿½ï¿½ï¿½
 			for(int i=0;i<Info.BlockType.length;i++)
 			{
 				for(int j=0;j<Info.BlockType[0].length;j++)
@@ -50,7 +50,7 @@ public class File_operate {
 					}
 				}
 			}
-			//Éú³ÉBlocktypeÐòÁÐ
+			//ï¿½ï¿½ï¿½ï¿½Blocktypeï¿½ï¿½ï¿½ï¿½
 			for(int i=0;i<Info.BlockType.length;i++)
 			{
 				for(int j=0;j<Info.BlockType[0].length;j++)
@@ -68,7 +68,7 @@ public class File_operate {
 					}
 				}
 			}
-			//Éú³ÉBlockdataÐòÁÐ
+			//ï¿½ï¿½ï¿½ï¿½Blockdataï¿½ï¿½ï¿½ï¿½
 		}
 	}
 	public static void importfile(String filename,boolean whetherverification) throws IOException
@@ -94,9 +94,9 @@ public class File_operate {
 				int xlength=str2int(tmplen[0]),ylength=str2int(tmplen[1]),zlength=str2int(tmplen[2]);
 				String Btype[]=temp1[2].split(";");
 				String Bdata[]=temp1[3].split(";");
-				Info.BlockType=new int[xlength][ylength][ylength];
-				Info.BlockData=new int[xlength][ylength][ylength];
-				//Êý×éÉú³É
+				Info.BlockType=new int[xlength][ylength][zlength];
+				Info.BlockData=new int[xlength][ylength][zlength];
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				System.out.println(""+Info.BlockType.length);
 				System.out.println(""+Info.BlockType[0].length);
 				System.out.println(""+Info.BlockType[0][0].length);
@@ -143,17 +143,17 @@ public class File_operate {
 		try {
 			out = new java.io.FileOutputStream(filename, true);
 
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Éµï¿½ catch ï¿½ï¿½
 
 
 			out.write(new java.lang.String(text).getBytes());
 
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Éµï¿½ catch ï¿½ï¿½
 
 
 			out.close();
 		} catch (IOException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Éµï¿½ catch ï¿½ï¿½
 			e.printStackTrace();
 		}
 	}
