@@ -19,7 +19,7 @@ public class GuiBuild extends MapEditMain
 		tfBlockID=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
 		tfBlockType=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.2), (int) (width*0.5-20), 15);
 		tfPosition=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.3), (int) (width*0.5-20), 15);
-		tfPosition.setText(""+Data.Position[0]+","+Data.Position[1]+","+Data.Position[2]);
+		UpdatetextinTextBox(tfPosition,""+Data.Position[0]+","+Data.Position[1]+","+Data.Position[2]+","+Data.Position[3]+","+Data.Position[4]+","+Data.Position[5]);
 		buttonList.add(btnBuilding = addGuiButton(0, (int)(width-width*0.5-50), (int)(height*0.8), 100, 20, StatCollector.translateToLocal("btnbuilding.button.guibuild.gui.ms")));
 	}
 	public void drawSubScreen(int par1, int par2, float par3)

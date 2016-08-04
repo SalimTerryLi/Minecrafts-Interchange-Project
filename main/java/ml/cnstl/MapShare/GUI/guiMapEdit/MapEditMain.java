@@ -175,8 +175,8 @@ public class MapEditMain extends GuiScreen
 	{
 		super.drawCenteredString(p_73732_1_, p_73732_2_, p_73732_5_, p_73732_5_, p_73732_5_);
 	}
-	protected List textList = new ArrayList();
-	protected List textListtext=new ArrayList();
+	protected ArrayList<GuiTextField> textList = new ArrayList();
+	protected ArrayList<String> textListtext=new ArrayList();
 	//以上封装
 	public int height=(int) (super.height*0.96),width=(int) (super.width-(super.width*0.1+1));
 	private int intxStartPos=(int) (super.width*0.1+1),intyStartPos=0;
@@ -220,6 +220,16 @@ public class MapEditMain extends GuiScreen
         	((GuiTextField)this.textList.get(k)).setText(((String)(textListtext.get(k))));
             ((GuiTextField)this.textList.get(k)).drawTextBox();
         }
+	}
+	public void UpdatetextinTextBox(GuiTextField textbox, String Texts)
+	{
+		for(int i=0;i<=textList.size()-1;i++)
+		{
+			if(textList.get(i)==textbox)
+			{
+				textListtext.set(i, Texts);
+			}
+		}
 	}
 	//以上子类调用
 	protected void SubmouseClicked(int par1, int par2, int par3)

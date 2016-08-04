@@ -1,5 +1,6 @@
 ﻿package ml.cnstl.MapShare.GUI.guiMapEdit;
 
+import ml.cnstl.MapShare.Data;
 import net.minecraft.client.gui.*;
 import net.minecraft.util.StatCollector;
 
@@ -15,6 +16,7 @@ public class GuiCopy extends MapEditMain
 	public void initSubGui()
 	{
 		tfPosition=addGuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
+		UpdatetextinTextBox(tfPosition,""+Data.Position[0]+","+Data.Position[1]+","+Data.Position[2]+","+Data.Position[3]+","+Data.Position[4]+","+Data.Position[5]);
 		buttonList.add(btnCoping = addGuiButton(0, (int)(width-width*0.5-50), (int)(height*0.2), 100, 20, StatCollector.translateToLocal("btncoping.button.guicopy.gui.ms")));
 	}
 	public void drawSubScreen(int par1, int par2, float par3)
