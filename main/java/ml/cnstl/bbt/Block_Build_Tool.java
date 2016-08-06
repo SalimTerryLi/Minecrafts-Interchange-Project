@@ -1,14 +1,17 @@
 package ml.cnstl.bbt;
 
 import ml.cnstl.bbt.item.*;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
+import net.minecraftforge.fml.common.registry.GameData;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -29,6 +32,8 @@ public class Block_Build_Tool
 		Info.PosSelector.setMaxStackSize(1);
 		Info.PosSelector.setCreativeTab(CreativeTabs.tabMaterials);
 		GameRegistry.registerItem(Info.PosSelector, "PositionSelector");
+		String name = GameData.getItemRegistry().getNameForObject(Info.PosSelector).toString();
+		ModelLoader.setCustomModelResourceLocation(Info.PosSelector, 0, new ModelResourceLocation(name, "inventory"));
 		//坐标选择工具
 	}
 	 
