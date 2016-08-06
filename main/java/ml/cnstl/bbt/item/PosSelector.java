@@ -1,6 +1,6 @@
 package ml.cnstl.bbt.item;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import ml.cnstl.bbt.Block_operate;
 import ml.cnstl.bbt.Info;
 import net.minecraft.block.Block;
@@ -9,15 +9,18 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 
 public class PosSelector extends Item {
 	@Override
-	public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ)
+	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world,BlockPos pos,EnumFacing side, float hitX, float hitY, float hitZ)
 	{
+		int x=pos.getX(),y=pos.getY(),z=pos.getZ();
 		Block_operate op=new Block_operate();
 		if(player==Minecraft.getMinecraft().thePlayer)
 		{

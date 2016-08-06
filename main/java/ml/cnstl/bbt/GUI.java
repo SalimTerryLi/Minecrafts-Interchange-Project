@@ -1,12 +1,14 @@
 package ml.cnstl.bbt;
 
+import java.io.IOException;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.util.StatCollector;
 
 import org.lwjgl.input.Keyboard;
 
-import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.*;
 import net.minecraft.item.ItemStack;
 
@@ -47,11 +49,11 @@ public class GUI extends GuiScreen{
     		}
     		else if(GUItype=="GUI_Build")
     		{
-    			tfBlockID=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
+    			tfBlockID=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
     			tfBlockID.setText(Build_BlockID);
-    			tfBlockType=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.2), (int) (width*0.5-20), 15);
+    			tfBlockType=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.2), (int) (width*0.5-20), 15);
     			tfBlockType.setText(Build_BlockType);
-    			tfPosition=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.3), (int) (width*0.5-20), 15);
+    			tfPosition=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.3), (int) (width*0.5-20), 15);
     			tfPosition.setText(""+Info.posset[0]+","+Info.posset[1]+","+Info.posset[2]+","+Info.posset[3]+","+Info.posset[4]+","+Info.posset[5]);
     			buttonList.add(btnPosGet = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.3), 45, 15, StatCollector.translateToLocal("btnposselect.button.gui.bbt")));
     			buttonList.add(btnBuilding = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.8), 100, 20, StatCollector.translateToLocal("btnbuilding.button.gui.bbt")));
@@ -62,16 +64,16 @@ public class GUI extends GuiScreen{
     			buttonList.add(btnisKeptID = new GuiButton(0, (int)(20), (int)(height*0.1), (int) (width*0.5-75), 15, StatCollector.translateToLocal("reblockid.replace.gui.bbt")));
     			buttonList.add(btnisKeptType = new GuiButton(0, (int)(20), (int)(height*0.2), (int) (width*0.5-75), 15, StatCollector.translateToLocal("reblocktype.replace.gui.bbt")));
     			btnisKeptType.enabled=false;
-    			tfreBlockID=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
+    			tfreBlockID=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
     			tfreBlockID.setText(Replace_reBlockID);
-    			tfreBlockType=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.2), (int) (width*0.5-20), 15);
+    			tfreBlockType=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.2), (int) (width*0.5-20), 15);
     			tfreBlockType.setText(Replace_reBlockType);
     			buttonList.add(btnEnabledType = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.2), 45, 15, StatCollector.translateToLocal("btnenabledtype.button.gui.bbt")));
-    			tfBlockID=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.3), (int) (width*0.5-20), 15);
+    			tfBlockID=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.3), (int) (width*0.5-20), 15);
     			tfBlockID.setText(Replace_BlockID);
-    			tfBlockType=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.4), (int) (width*0.5-20), 15);
+    			tfBlockType=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.4), (int) (width*0.5-20), 15);
     			tfBlockType.setText(Replace_BlockType);
-    			tfPosition=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.5), (int) (width*0.5-20), 15);
+    			tfPosition=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.5), (int) (width*0.5-20), 15);
     			tfPosition.setText(""+Info.posset[0]+","+Info.posset[1]+","+Info.posset[2]+","+Info.posset[3]+","+Info.posset[4]+","+Info.posset[5]);
     			buttonList.add(btnPosGet = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.5), 45, 15, StatCollector.translateToLocal("btnposselect.button.gui.bbt")));
     			buttonList.add(btnReplacing = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.8), 100, 20, StatCollector.translateToLocal("btnreplacing.button.gui.bbt")));
@@ -79,7 +81,7 @@ public class GUI extends GuiScreen{
     		}
     		else if(GUItype=="GUI_Copy")
     		{
-    			tfPosition=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
+    			tfPosition=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
     			tfPosition.setText(""+Info.posset[0]+","+Info.posset[1]+","+Info.posset[2]+","+Info.posset[3]+","+Info.posset[4]+","+Info.posset[5]);
     			buttonList.add(btnPosGet = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.1), 45, 15, StatCollector.translateToLocal("btnposselect.button.gui.bbt")));
     			buttonList.add(btnCoping = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.2), 100, 20, StatCollector.translateToLocal("btncoping.button.gui.bbt")));
@@ -87,7 +89,7 @@ public class GUI extends GuiScreen{
     		}
     		else if(GUItype=="GUI_Paste")
     		{
-    			tfPosition=new GuiTextField(fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
+    			tfPosition=new GuiTextField(0, fontRendererObj, (int)(width*0.5), (int)(height*0.1), (int) (width*0.5-20), 15);
     			tfPosition.setText(""+Info.posset[0]+","+Info.posset[1]+","+Info.posset[2]);
     			buttonList.add(btnPosGetonlyone = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.1), 45, 15, StatCollector.translateToLocal("btnposselect.button.gui.bbt")));
     			buttonList.add(btnIgnoreempyt = new GuiButton(0, (int)(width-width*0.5-50), (int)(height*0.2), 45, 15, StatCollector.translateToLocal("btnignoreemptydisabled.paste.gui.bbt")));
@@ -139,7 +141,7 @@ public class GUI extends GuiScreen{
     }
     
     @Override
-    protected void keyTyped(char par1, int par2) {
+    protected void keyTyped(char par1, int par2) throws IOException {
     	if(GUItype=="GUI_Build")
     	{
     		if(tfBlockID.textboxKeyTyped(par1, par2)) //向文本框传入输入的内容
@@ -176,7 +178,7 @@ public class GUI extends GuiScreen{
     }
      
     @Override
-    protected void mouseClicked(int par1, int par2, int par3) {
+    protected void mouseClicked(int par1, int par2, int par3) throws IOException {
     	if(GUItype=="GUI_main")
         {
          	
@@ -382,15 +384,15 @@ public class GUI extends GuiScreen{
         }
         else if(button==btngetBBTtool)
         {
-        	EntityClientPlayerMP player=Minecraft.getMinecraft().thePlayer;
+        	EntityPlayerSP player=Minecraft.getMinecraft().thePlayer;
         	player.inventory.addItemStackToInventory(new ItemStack(Info.PosSelector));
         }
         else if(button==btngetFootStandOnpos)
         {
-        	EntityClientPlayerMP player=Minecraft.getMinecraft().thePlayer;
+        	EntityPlayerSP player=Minecraft.getMinecraft().thePlayer;
         	int posx,posy,posz;
-        	posx=(int)player.posX;
-        	posy=(int) player.posY-2;
+        	posx=(int)player.posX-1;
+        	posy=(int) player.posY-1;
         	posz=(int) player.posZ;
         	if(Info.Tool_Mode=="setpositiononlyone")
         	{
