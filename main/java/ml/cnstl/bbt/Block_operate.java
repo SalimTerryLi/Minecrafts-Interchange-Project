@@ -3,7 +3,6 @@ package ml.cnstl.bbt;
 import net.minecraft.block.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
 public class Block_operate
@@ -19,29 +18,28 @@ public class Block_operate
 	}
 	private String getBlockname(int x,int y,int z)
 	{
-		String Blockname=world.getBlockState(new BlockPos(x,y,z)).getBlock().getUnlocalizedName();
+		String Blockname=world.getBlock(x, y, z).getUnlocalizedName();
 		return Blockname;
 	}
 	public int getBlockdata(int x,int y,int z)
 	{
-		int Blockdata=world.getBlockState(new BlockPos(x,y,z)).getBlock().getMetaFromState(world.getBlockState(new BlockPos(x,y,z)));
+		int Blockdata=world.getBlockMetadata(x, y, z);
 		return Blockdata;
 	}
 	public int getBlockid(int x,int y,int z)
 	{
-		int Blockid=Block.getIdFromBlock(world.getBlockState(new BlockPos(x,y,z)).getBlock());
+		int Blockid=Block.getIdFromBlock(world.getBlock(x, y, z));
 		return Blockid;
 	}
 	private void setBlockbyname(int x, int y, int z, String blockname, int blockdata)
 	{
 		Block block=Block.getBlockFromName(blockname);
-		world.setBlockState(new BlockPos(x,y,z), block.getStateFromMeta(blockdata) , 2) ;
-		//world.setBlock(x, y, z, block, blockdata, 2);
+		world.setBlock(x, y, z, block, blockdata, 2);
 	}
 	private void setBlockbyid(int x, int y, int z, int blockid, int blockdata)
 	{
 		Block block=Block.getBlockById(blockid);
-		world.setBlockState(new BlockPos(x,y,z), block.getStateFromMeta(blockdata) , 2) ;
+		world.setBlock(x, y, z, block, blockdata, 3);
 	}
 	//基本操作封装
 	public void Build(int xf,int yf,int zf,int xs,int ys,int zs,int Blocktype,int Blockdata)

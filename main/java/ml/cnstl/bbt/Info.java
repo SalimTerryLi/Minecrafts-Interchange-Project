@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 public class Info {
 	public static final String MOD_NAME="Block Build Tool";
 	public static final String MOD_ID="Block_Build_Tool";
-	public static final String MOD_VERSION="Beta1";
+	public static final String MOD_VERSION="Beta2";
 	//Minecraft Mod's main info
 	static public Item PosSelector;
 	

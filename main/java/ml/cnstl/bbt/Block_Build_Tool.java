@@ -4,12 +4,12 @@ import ml.cnstl.bbt.item.*;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.*;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.*;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid=Info.MOD_ID,name=Info.MOD_NAME,version=Info.MOD_VERSION)
@@ -25,7 +25,7 @@ public class Block_Build_Tool
 		
 		Info.PosSelector=new PosSelector();
 		Info.PosSelector.setUnlocalizedName("PositionSelector");
-		Info.PosSelector.setRegistryName("Block_Build_Tool:PosSelector");
+		Info.PosSelector.setTextureName("Block_Build_Tool:PosSelector");
 		Info.PosSelector.setMaxStackSize(1);
 		Info.PosSelector.setCreativeTab(CreativeTabs.tabMaterials);
 		GameRegistry.registerItem(Info.PosSelector, "PositionSelector");
