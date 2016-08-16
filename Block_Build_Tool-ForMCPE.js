@@ -1,4 +1,4 @@
-var block_build_tool_level="Beta2";
+var block_build_tool_level="Beta2e2";
 //静态脚本信息
 var positions=new Array(6),fpoint=false,pselected=false;
 var paste2position=new Array(3),pastepselected=false,pastemode="buttom_center",previewstr="";
@@ -58,7 +58,7 @@ else if(tool_mode=="setpastep")
 }
 else if(tool_mode=="printinfo")
 {
-	clientMessage("tool" + hid + "type" + itemDamage + "block" + bid + "type" + blockDamage + "pos " + x + " " + y + " " + z);
+	clientMessage("Tool" + hid + "Type" + itemDamage + "Block" + bid + "Type" + blockDamage + "@" + x + "," + y + "," + z + " Player@" + Math.round(Player.getX()*100)/100 +","+ Math.round(Player.getY()*100)/100 +","+Math.round(Player.getZ()*100)/100);
 }
 }
 function destroyBlock(x,y,z,side)
@@ -1081,7 +1081,51 @@ if(whethercopied)
  }
  if((tool_mode!="game")&(tool_mode!="outgame"))
  {
- 	var button=new android.widget.Button(ctx)
+	if((tool_mode=="setposition")|(tool_mode=="setpositionc")|(tool_mode=="setpositionr")|(tool_mode=="setpastep"))
+	{
+		var button=new android.widget.Button(ctx)
+		button.setText("获取脚下坐标")
+		button.setOnClickListener(new android.view.View.OnClickListener({
+		onClick:function(viewarg)
+		{
+			if((tool_mode=="setposition")|(tool_mode=="setpositionc")|(tool_mode=="setpositionr"))
+			{
+				if(!fpoint)
+				{
+					positions[0]=Math.floor(Player.getX());
+					positions[1]=Math.floor(Player.getY())-2;
+					positions[2]=Math.floor(Player.getZ());
+					fpoint=true;
+					print("首坐标已确定");
+				}
+				else
+				{
+					positions[3]=Math.floor(Player.getX());
+					positions[4]=Math.floor(Player.getY())-2;
+					positions[5]=Math.floor(Player.getZ());
+					fpoint=false;
+					print("次坐标已确定，请打开工具菜单");
+					pselected=true;
+					if(tool_mode=="setposition"){tool_mode="build";}else if(tool_mode=="setpositionc"){tool_mode="copy";}else if(tool_mode=="setpositionr"){tool_mode="replace";}
+					menu.dismiss();
+				}
+			}
+			else if(tool_mode=="setpastep")
+			{
+				paste2position[0]=Math.floor(Player.getX());
+				paste2position[1]=Math.floor(Player.getY())-2;
+				paste2position[2]=Math.floor(Player.getZ());
+				pastepselected=true;
+				paste(x,y,z,pastemode,"preview");
+				tool_mode="paste";
+				print("坐标已确定，请打开工具菜单");
+				menu.dismiss();
+			}
+		}}))
+		layout.addView(button);
+	}
+	
+	var button=new android.widget.Button(ctx)
 	button.setText("返回游戏")
 	button.setOnClickListener(new android.view.View.OnClickListener({
 	onClick:function(viewarg)
